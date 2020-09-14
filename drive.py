@@ -17,16 +17,11 @@ class drive:
             file_name = file_info['name']
 
         request = self.SERVICE.files().get_media(fileId=file_id)
-        fh = io.BytesIO()
+        fh = io.FileIO(file_name, 'wb')
         downloader = MediaIoBaseDownload(fh, request=request)
         done = False
 
         while not done:
             status, done = downloader.next_chunk()
             print('Download %d%%.' % int(status.progress() * 100))
-
-        with open(file_name, 'wb') as f:
-            fh.seek(0)
-            f.write(fh.read())
-            f.close()
         
