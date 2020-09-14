@@ -2,16 +2,18 @@
 Python program to download Google Drive files. Build with Python 3.8.1
 
 # Prerequisites
-Download and install the Google dependencies
+1. Download and install Python: https://www.python.org/downloads/
 
-`pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`
+2. Download and install the Google dependencies
 
-1. [Enable the Google Drive API](https://developers.google.com/drive/api/v3/enable-drive-api)
-2. Go to the `credentials` menu and click `CREATE CREDENTIALS`
-3. Create a new OAuth client ID
-4. In the `credentials` menu, the newly created OAuth client ID should be added to the OAuth 2.0 Client IDs list.
-5. Download its data by either clicking the download icon on the right, or by clicking the edit button and then on the `DOWNLOAD JSON` button.
-6. You now have two options:
+    `pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`
+
+3. [Enable the Google Drive API](https://developers.google.com/drive/api/v3/enable-drive-api)
+4. Go to the `credentials` menu and click `CREATE CREDENTIALS`
+5. Create a new OAuth client ID
+6. In the `credentials` menu, the newly created OAuth client ID should be added to the OAuth 2.0 Client IDs list.
+7. Download its data by either clicking the download icon on the right, or by clicking the edit button and then on the `DOWNLOAD JSON` button.
+8. You now have two options:
     1. You save this file in the same directory as `pydrive.py` and `rename the file to 'client_secret.json`
     2. You pass the path of this json file when using the program using the optional `-c` or `--credentials` argument
     
@@ -23,10 +25,10 @@ Add the `-c` or `--credentials` argument to specify the path to your client secr
 
 A browser will open a you will be prompted to allow this application to authenticate using your account, accept.
 
-### Example #1 (6i)
+### Example #1 (8i)
 `python pydrive.py --id some_valid_id`
 
-### Example #2 (6ii)
+### Example #2 (8ii)
 `python pydrive.py --id some_valid_id --credentials path_to_client_secret`
 
 Your authentication data is stored in `token.pickle`, located in the same directory as `pydrive.py`. If this file is changed, deleted or damaged, you will have to go through the authentication process again.
