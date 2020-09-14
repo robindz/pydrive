@@ -19,7 +19,7 @@ Download and install the Google dependencies
 ## First time usage
 When using pydrive for the first time, you will have to authenticate with Google.
 
-Add the -c, --credentials argument to specify the path to your client secret file if you did not follow step 6i.
+Add the `-c` or `--credentials` argument to specify the path to your client secret file if you did not follow step 6i.
 
 A browser will open a you will be prompted to allow this application to authenticate using your account, accept.
 
