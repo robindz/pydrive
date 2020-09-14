@@ -1,0 +1,4 @@
+/.vscode
+/client_secret.json
+/token.pickle
+/__pycache__
