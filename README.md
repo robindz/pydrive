@@ -14,7 +14,7 @@ Python program to download Google Drive files. Build with Python 3.8.1
 6. In the `credentials` menu, the newly created OAuth client ID should be added to the OAuth 2.0 Client IDs list.
 7. Download its data by either clicking the download icon on the right, or by clicking the edit button and then on the `DOWNLOAD JSON` button.
 8. You now have two options:
-    1. You save this file in the same directory as `pydrive.py` and `rename the file to 'client_secret.json`
+    1. You save this file in the same directory as `pydrive.py` and `rename the file to 'client_secret.json'`
     2. You pass the path of this json file when using the program using the optional `-c` or `--credentials` argument
     
 # Usage
@@ -29,7 +29,7 @@ A browser will open a you will be prompted to allow this application to authenti
 `python pydrive.py --id some_valid_id`
 
 ### Example #2 (8ii)
-`python pydrive.py --id some_valid_id --credentials path_to_client_secret`
+`python pydrive.py --id some_valid_id --credentials path/to/client_secret`
 
 Your authentication data is stored in `token.pickle`, located in the same directory as `pydrive.py`. If this file is changed, deleted or damaged, you will have to go through the authentication process again.
 
