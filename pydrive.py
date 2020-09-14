@@ -4,6 +4,7 @@ import os
 from auth import auth
 from drive import drive
 from google.auth.exceptions import RefreshError
+from googleapiclient.http import DEFAULT_CHUNK_SIZE
 
 # Constant variables
 SCOPES = ['https://www.googleapis.com/auth/drive']
@@ -12,7 +13,8 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 parser = argparse.ArgumentParser(description='Download Google Drive files with pydrive.')
 parser.add_argument('-i', '--id', metavar='', type=str, help='id of the file', required=True)
 parser.add_argument('-n', '--name', metavar='', type=str, help='output filename', default='')
-parser.add_argument('-c', '--credentials', metavar='', type=str, help='path to client secret file (default client_secret.json)', default='client_secret.json')
+parser.add_argument('-c', '--credentials', metavar='', type=str, help='path to client secret file (default: client_secret.json)', default='client_secret.json')
+parser.add_argument('-s', '--chunk-size', metavar='', type=int, help='chunk size used to download files in bytes (default: 100MB)',default=DEFAULT_CHUNK_SIZE)
 
 args = parser.parse_args()
 
@@ -22,7 +24,7 @@ def main():
     try:
         drive_credentials = drive_authorization.get_credentials()
         drive_service = drive(drive_credentials)
-        drive_service.download_file(args.id, args.name)
+        drive_service.download_file(args.id, args.name, args.chunk_size)
     except FileNotFoundError as fnfe:
         print('\''+args.credentials+'\' was not found or is not a valid client secret file', file=sys.stderr)
     except RefreshError as rfe:

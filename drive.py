@@ -11,14 +11,14 @@ class drive:
     def __get_file_info(self,file_id):
         return self.SERVICE.files().get(fileId=file_id).execute()
 
-    def download_file(self,file_id,file_name):
+    def download_file(self,file_id,file_name,chunk_size):
         file_info = self.__get_file_info(file_id)
         if not file_name.strip():
             file_name = file_info['name']
 
         request = self.SERVICE.files().get_media(fileId=file_id)
         fh = io.FileIO(file_name, 'wb')
-        downloader = MediaIoBaseDownload(fh, request=request)
+        downloader = MediaIoBaseDownload(fh, request=request, chunksize=chunk_size)
         done = False
 
         while not done:
