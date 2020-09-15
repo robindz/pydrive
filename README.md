@@ -38,7 +38,7 @@ Your authentication data is stored in `token.pickle`, located in the same direct
 ## Normal usage
 Currently, pydrive allows you to download Google Drive files based on their Google Drive file id. These can be found in the URLs of shareable links: `https://drive.google.com/file/<TYPE>/<FILE_ID>/view`
 
-Optionally, you can rename the file using the optional `-n` or `--name` argument, this will also overwrite the file extension.
+You can rename the file using the `-n` or `--name` argument, this will also overwrite the file extension.
 
 # pydrive (ko)
 구글드라이브의 파일을 다운로드 할 수 있는 프로그램입니다. 파이썬 3.8.1 버전 이상 설치하시길 권장합니다.
