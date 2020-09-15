@@ -25,6 +25,8 @@ Add the `-c` or `--credentials` argument to specify the path to your client secr
 
 A browser will open a you will be prompted to allow this application to authenticate using your account, accept.
 
+Note, if you are remoted into a terminal you will have to use the `--no-localhost` option to authenticate.
+
 ### Example #1 (8i)
 `python pydrive.py --id some_valid_id`
 
@@ -37,8 +39,6 @@ Your authentication data is stored in `token.pickle`, located in the same direct
 Currently, pydrive allows you to download Google Drive files based on their Google Drive file id. These can be found in the URLs of shareable links: `https://drive.google.com/file/<TYPE>/<FILE_ID>/view`
 
 Optionally, you can rename the file using the optional `-n` or `--name` argument, this will also overwrite the file extension.
-
-Note, if you are remoted into a terminal you will have to use the `--no-localhost` option to authenticate.
 
 # pydrive (ko)
 구글드라이브의 파일을 다운로드 할 수 있는 프로그램입니다. 파이썬 3.8.1 버전 이상 설치하시길 권장합니다.
@@ -70,6 +70,8 @@ Note, if you are remoted into a terminal you will have to use the `--no-localhos
 
 해당 프로그램을 첫 실행시 프로그램은 구글에 로그인하는 링크를 줄 것이고 해당 링크를 브라우저에서 실행한다음 로그인하시면 됩니다.
 
+추가로 프로그램을 사용하는 서버와 다른 컴퓨터에서 로그인 할 경우 `--no-localhost` 옵션을 추가하여 인증하시기 바랍니다. 이 경우 로그인 이후 나오는 인증값을 터미널에 입력해주시면 됩니다.
+
 ### Example #1 (8i)
 `python pydrive.py --id some_valid_id`
 
@@ -86,5 +88,3 @@ Pydrive는 Google Drive의 파일 `ID(고유값)`를 기반으로  Google Drive�
 `https://drive.google.com/file/<파일 타입>/<파일_ID(이거를 복사하세요)>/view`
 
 선택적으로 `-n` 또는 `--name` 옵션를 사용하여 파일이름을 변경할 수 있으며 파일 확장자명을 덮어씌울수도 있습니다. 따라서 `-n` 옵션을 사용시 확장자가 없도록 파일이름을 설정하면 확장자명이 지워져버릴 수 있습니다. 확장자가 필요하다면 꼭 기제 해주세요.
-
-추가로 프로그램을 사용하는 서버와 다른 컴퓨터에서 로그인 할 경우 `--no-localhost` 옵션을 추가하여 인증하시기 바랍니다. 이 경우 로그인 이후 나오는 인증값을 터미널에 입력해주시면 됩니다.
