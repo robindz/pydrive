@@ -37,3 +37,5 @@ Your authentication data is stored in `token.pickle`, located in the same direct
 Currently, pydrive allows you to download Google Drive files based on their Google Drive file id. These can be found in the URLs of shareable links: `https://drive.google.com/file/<TYPE>/<FILE_ID>/view`
 
 Optionally, you can rename the file using the optional `-n` or `--name` argument, this will also overwrite the file extension.
+
+Note, if you are remoted into a terminal you will have to use the `--no-localhost` option to authenticate.
