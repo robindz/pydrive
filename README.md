@@ -29,7 +29,7 @@ A browser will open a you will be prompted to allow this application to authenti
 `python pydrive.py --id some_valid_id`
 
 ### Example #2 (8ii)
-`python pydrive.py --id some_valid_id --credentials path/to/client_secret`
+`python pydrive.py --id some_valid_id --credentials /path/to/client_secret`
 
 Your authentication data is stored in `token.pickle`, located in the same directory as `pydrive.py`. If this file is changed, deleted or damaged, you will have to go through the authentication process again.
 
@@ -74,7 +74,7 @@ Note, if you are remoted into a terminal you will have to use the `--no-localhos
 `python pydrive.py --id some_valid_id`
 
 ### Example #2 (8ii)
-`python pydrive.py --id some_valid_id --credentials path/to/client_secret`
+`python pydrive.py --id some_valid_id --credentials /path/to/client_secret`
 
 인증된 데이터는 `pydrive.py`과 같은 디렉토리에 있는 `token.pickle` 파일에 저장됩니다. 이 파일이 변경되거나 삭제된다면 인증절차를 다시 거쳐야 합니다.
 
