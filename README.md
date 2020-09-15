@@ -76,11 +76,6 @@ Note, if you are remoted into a terminal you will have to use the `--no-localhos
 ### Example #2 (8ii)
 `python pydrive.py --id some_valid_id --credentials path/to/client_secret`
 
-### Example #3 파이선을 구동하는 컴퓨터와 로그인하는 컴퓨터가 다를경우
-`python pydrive.py --id some_valid_id --no-localhost`
-
-`python pydrive.py --id some_valid_id --credentials path/to/client_secret --no-localhost`
-
 인증된 데이터는 `pydrive.py`과 같은 디렉토리에 있는 `token.pickle` 파일에 저장됩니다. 이 파일이 변경되거나 삭제된다면 인증절차를 다시 거쳐야 합니다.
 
 ## 정상적인 작동법
