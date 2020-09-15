@@ -21,7 +21,7 @@ Python program to download Google Drive files. Build with Python 3.8.1
 ## First time usage
 When using pydrive for the first time, you will have to authenticate with Google.
 
-Add the `-c` or `--credentials` argument to specify the path to your client secret file if you did not follow step 6i.
+Add the `-c` or `--credentials` argument to specify the path to your client secret file if you did not follow step 8i.
 
 A browser will open a you will be prompted to allow this application to authenticate using your account, accept.
 
