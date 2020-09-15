@@ -9,7 +9,7 @@ class auth:
         self.SCOPES = SCOPES
         self.CLIENT_SECRET_FILE = CLIENT_SECRET_FILE
     
-    def get_credentials(self):
+    def get_credentials(self,use_console):
         creds = None
         # The file token.pickle stores the user's access and refresh tokens, and is
         # created automatically when the authorization flow completes for the first
@@ -28,7 +28,11 @@ class auth:
                 print('Using','\''+self.CLIENT_SECRET_FILE+'\'','as client secret file.')
                 flow = InstalledAppFlow.from_client_secrets_file(
                     self.CLIENT_SECRET_FILE, self.SCOPES)
-                creds = flow.run_console()
+                if use_console:
+                    creds = flow.run_console()
+                else:
+                    creds = flow.run_local_server(port=0)
+
             # Save the credentials for the next run
             with open('token.pickle', 'wb') as token:
                 pickle.dump(creds, token)
