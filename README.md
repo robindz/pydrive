@@ -71,10 +71,10 @@ Note, if you are remoted into a terminal you will have to use the `--no-localhos
 
 이 경우 로그인 이후 나오는 인증값을 터미널에 입력해주시면 됩니다.
 
-### Example #1 (8-1)
+### Example #1 (8-i)
 `python pydrive.py --id some_valid_id`
 
-### Example #2 (8-2)
+### Example #2 (8-ii)
 `python pydrive.py --id some_valid_id --credentials path/to/client_secret`
 
 ### Example #3 파이선을 구동하는 컴퓨터와 로그인하는 컴퓨터가 다를경우
